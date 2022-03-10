@@ -1,6 +1,7 @@
 html,
 #app {
   height: 100%;
+  text-align: center;
 }
 
 body {
@@ -10,15 +11,16 @@ body {
 
 .main-app {
   height: 100%;
-  display: grid;
-  grid-template-rows: fit-content minmax(calc(100vh - 8rem), calc(100% - 8rem)) fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header,
 footer {
   background-color: #333;
   color: whitesmoke;
-  text-align: center;
+  height: fit-content;
 }
 
 .main-header {
@@ -36,11 +38,9 @@ footer {
 .todo-app,
 .home-page {
   padding: 1rem 0;
-  text-align: center;
 }
 
 .todo-add {
-  text-align: center;
   padding: 1rem 0;
 }
 
@@ -63,7 +63,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .edit-content {
@@ -75,7 +74,14 @@ footer {
 
 .user-details {
   padding: 1rem 0;
-  text-align: center;
+}
+
+.user-details form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .activities {

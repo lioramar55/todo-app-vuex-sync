@@ -6,7 +6,7 @@ export default {
         <nav>
           <router-link to="/">Home</router-link> | 
           <router-link to="/todo">Todo app</router-link> | 
-          <router-link to="/user">User</router-link> |
+          <router-link to="/user">Profile</router-link> 
         </nav>
         <span> Welcome {{username}} - %{{percentageDone}}</span>
       </div>

@@ -4,7 +4,7 @@ import todoFilter from '../cmps/todo-filter.cmp.js'
 
 export default {
   template: `
-    <section :style="userStyle" class="todo-app">
+    <section class="todo-app">
       <todo-filter @set-filter="onSetFilter"></todo-filter>
       <todo-add @add-todo="onAddTodo"></todo-add>
       <todo-list 
@@ -52,14 +52,6 @@ export default {
         type: 'setFilter',
         filterBy,
       })
-    },
-  },
-  computed: {
-    userStyle() {
-      const user = this.$store.state.user
-      if (user.prefs) {
-        return { 'background-color': this.prefs.bgColor, color: this.prefs.color }
-      } else return ''
     },
   },
 }

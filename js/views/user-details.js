@@ -2,8 +2,7 @@ import { utilService } from '../services/util-service.js'
 
 export default {
   template: `
-    <section class="user-details"
-      :style="userStyle">
+    <section class="user-details">
       <h1>{{username}} Profile</h1>
       <div class="pref">
         <form @submit.prevent="onSavePrefs">
@@ -22,6 +21,16 @@ export default {
             <input type="color" 
               v-model="prefs.bgColor"/>
           </label>
+          <label>
+            Done color:
+            <input type="color" 
+              v-model="prefs.doneColor"/>
+          </label>
+          <label>
+            Undone color:
+            <input type="color" 
+              v-model="prefs.undoneColor"/>
+          </label>
           <button>Save</button>
         </form>
       </div>
@@ -39,28 +48,25 @@ export default {
     return {
       name: '',
       prefs: this.$store.state.user.prefs
-        ? this.$store.state.user.prefs
+        ? { ...this.$store.state.user.prefs }
         : {
-            color: '',
-            bgColor: '',
+            color: '#000000',
+            bgColor: '#ffffff',
+            doneColor: '#FA8072',
+            undoneColor: '#87CEEB',
           },
     }
   },
   methods: {
     onSavePrefs() {
-      this.$store.commit({ type: 'savePrefs', name: this.name, prefs: { ...this.prefs } })
+      const prefs = JSON.parse(JSON.stringify(this.prefs))
+      this.$store.commit({ type: 'savePrefs', name: this.name, prefs })
     },
     formatTime(time) {
       return `${utilService.formatTimeActivity(time)}`
     },
   },
   computed: {
-    userStyle() {
-      const user = this.$store.state.user
-      if (user.prefs) {
-        return { 'background-color': this.prefs.bgColor, color: this.prefs.color }
-      } else return ''
-    },
     username() {
       return this.$store.getters.username
     },

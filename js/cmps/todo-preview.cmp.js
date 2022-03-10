@@ -19,6 +19,10 @@ export default {
   },
   computed: {
     previewStyle() {
+      if (this.$store.state.user.prefs) {
+        const { doneColor, undoneColor } = this.$store.state.user.prefs
+        return { 'background-color': this.todo.doneAt ? doneColor : undoneColor }
+      }
       return { 'background-color': this.todo.doneAt ? 'skyblue' : 'salmon' }
     },
     isDoneBtn() {
