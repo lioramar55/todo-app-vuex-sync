@@ -8,8 +8,8 @@ export default {
           <router-link to="/todo">Todo app</router-link> | 
           <router-link to="/user">User</router-link> |
         </nav>
+        <span> Welcome {{username}} - %{{percentageDone}}</span>
       </div>
-      <span> Welcome {{username}} - %{{percentageDone}}</span>
     </header>
   `,
   computed: {
