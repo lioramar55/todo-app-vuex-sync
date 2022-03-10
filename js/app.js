@@ -4,9 +4,11 @@ import appHeader from './cmps/app-header.cmp.js'
 import appFooter from './cmps/app-footer.cmp.js'
 const options = {
   template: `
-    <section :style="userStyle" class="main-app">
+    <section  class="main-app">
       <app-header></app-header>
-      <router-view></router-view>
+      <div :style="userStyle" class="app-container">
+        <router-view></router-view>
+      </div>
       <app-footer></app-footer>
     </section>
   `,

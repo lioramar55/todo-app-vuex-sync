@@ -36,6 +36,7 @@ footer {
 }
 
 .todo-app,
+.user-details,
 .home-page {
   padding: 1rem 0;
 }
@@ -70,10 +71,6 @@ footer {
   padding: 1rem;
   width: fit-content;
   height: fit-content;
-}
-
-.user-details {
-  padding: 1rem 0;
 }
 
 .user-details form {
