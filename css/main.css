@@ -1,0 +1,107 @@
+html,
+#app {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.main-app {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 4rem minmax(calc(100% - 8rem), 100vh-8rem) 4rem;
+}
+
+header,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: whitesmoke;
+}
+
+.main-header {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-app {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.todo-add {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.todo-preview {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.todo-edit,
+.todo-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.edit-content {
+  outline: 1px solid #333;
+  padding: 1rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.user-details {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.activity {
+  background-color: #444;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+header a,
+header a:active,
+header a:hover {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: whitesmoke;
+}
+
+a:active,
+a:hover {
+  color: rgb(172, 196, 200);
+}
