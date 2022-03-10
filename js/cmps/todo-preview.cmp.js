@@ -8,8 +8,8 @@ export default {
       <p>Created: {{timeCreated()}}</p>
       <button @click="$emit('toggle-todo', todo)">{{isDoneBtn}}</button>
       <button @click="$emit('delete-todo', todo._id)">X</button>
-      <button @click="$router.push('/todo/'+todo._id)">Edit</button>
-      <button>Details</button>
+      <button @click="$router.push('/todo/'+todo._id+'/edit')">Edit</button>
+      <button @click="$router.push('/todo/'+todo._id)">Details</button>
     </div>
   `,
   methods: {
