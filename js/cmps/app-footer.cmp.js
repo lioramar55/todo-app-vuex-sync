@@ -1,7 +1,7 @@
 export default {
   template: `
     <footer>
-      <div class="logo"><h1>Todo App</h1></div>
+      <div class="logo"><h3>Cofferights Todo App by Lior Amar 2022 &copy;</h3></div>
     </footer>
   `,
 }
