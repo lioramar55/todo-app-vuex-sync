@@ -1,2 +1,2 @@
-# todo-app-vuex-sync
-Todo app with Vue js and vuex 
+## Welcome to my Todo App
+
